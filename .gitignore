@@ -10,6 +10,9 @@ build/
 .vscode/
 *.iml
 
+# GitHub workflows and metadata
+.github/
+
 # Generated files
 pubspec.lock
 
@@ -33,5 +36,5 @@ coverage/
 test_output/
 
 # Editor backups
-*~ 
+*~
 *.swp
