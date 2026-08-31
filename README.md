@@ -37,6 +37,25 @@ Includes a `Person` model, BMI calculation and classification logic, console ent
     dart test
     ```
 
+## Example
+
+### Input
+
+```bash
+Name: Alice
+Weight (kg): 68.5
+Height (m): 1.70
+```
+
+### Output
+
+```bash
+Result for Alice:
+Weight: 68.5 kg
+Height: 1.7 m
+BMI: 23.71 - Healthy
+```
+
 ## Usage Notes
 
 The console app accepts decimal input with either ``.`` or ``,`` as the decimal separator.
@@ -49,5 +68,34 @@ To adapt this project into a Flutter app:
 Keep ``lib/person.dart`` and ``lib/bmi_calculator.dart`` as the domain layer.
 Create UI widgets under ``lib/ui/`` that use ``TextField`` for input and display results in widgets.
 Use ``Provider``, ``Riverpod``, or simple ``setState`` to manage state and trigger calculations.
+
+## CI Example
+
+Add ``.github/workflows/dart.yml`` to run tests on push and pull requests:
+
+```bash
+name: Dart CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 'stable'
+      - name: Get dependencies
+        run: dart pub get
+      - name: Run tests
+        run: dart test --reporter expanded
+
+```
 
 [LICENSE](/LICENSE)
