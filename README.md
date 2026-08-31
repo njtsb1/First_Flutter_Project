@@ -1,6 +1,7 @@
 # Uploading Your Flutter Project to GitHub
 
 Project developed at Santander Bootcamp 2023 - Mobile with Flutter, under the guidance of specialist [Danilo Perez](https://github.com/perez-danilo "Danilo Perez").
+
 A simple BMI (Body Mass Index) calculator written in Dart with a minimal project layout.  
 Includes a `Person` model, BMI calculation and classification logic, console entrypoint, and unit tests.
 
